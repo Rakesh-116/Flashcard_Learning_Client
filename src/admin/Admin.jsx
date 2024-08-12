@@ -41,7 +41,7 @@ const Admin = () => {
       <Header />
       <div className="p-4">
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {flashcards.map(flashcard => (
+          {flashcards?.map(flashcard => (
             <div key={flashcard.id} className="bg-white p-4 border border-gray-300 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-2">Q: {flashcard.question}</h3>
               <p className="text-gray-700 mb-4">A: {flashcard.answer}</p>
@@ -61,6 +61,7 @@ const Admin = () => {
               </div>
             </div>
           ))}
+          <div>Hello</div>
         </div>
       </div>
     </>
