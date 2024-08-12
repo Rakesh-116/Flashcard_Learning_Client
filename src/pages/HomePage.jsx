@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Flashcard from "../components/Flashcard.jsx";
+import Flashcards from '../components/Flashcards';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
@@ -53,7 +53,7 @@ const HomePage = () => {
       <h1 className="text-2xl font-bold mb-4 text-center text-white pb-20">Welcome to the Flashcard App!</h1>
       <div className="flex flex-col justify-center items-center">
         {currentFlashcard && (
-          <Flashcard
+          <Flashcards
             flashcard={currentFlashcard}
             showAnswer={showAnswer}
             setShowAnswer={setShowAnswer}

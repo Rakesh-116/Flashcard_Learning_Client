@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
-import AdminDashboard from "./admin/AdminDashboard.jsx";
-import Insert from "./admin/InsertFlashCard.jsx";
-import Update from "./admin/UpdateFlashCard.jsx";
+import Admin from "./admin/Admin.jsx";
+import Insert from "./admin/Insert.jsx";
+import Update from "./admin/Update.jsx";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         
         {/* Admin Routes */}
-        <Route path="/admin" element={<AdminDashboard />}/>
+        <Route path="/admin" element={<Admin />}/>
         <Route path="/admin/insert" element={<Insert />}/>
         <Route path="/admin/update/:id" element={<Update />}/>
       </Routes>

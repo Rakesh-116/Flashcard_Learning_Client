@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../styles.css";
 
-const Flashcard = ({ flashcard, showAnswer, setShowAnswer }) => {
+const Flashcards = ({ flashcard, showAnswer, setShowAnswer }) => {
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
@@ -27,4 +27,4 @@ const Flashcard = ({ flashcard, showAnswer, setShowAnswer }) => {
   );
 };
 
-export default Flashcard;
+export default Flashcards;

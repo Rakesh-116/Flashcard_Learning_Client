@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Navbar from '../components/admin/Navbar.jsx';
+import Header from '../components/admin/Header';
 import { Link } from 'react-router-dom';
 
-const AdminDashboard = () => {
+const Admin = () => {
   const [flashcards, setFlashcards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,7 +38,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <div className="p-4">
         <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {flashcards.map(flashcard => (
@@ -67,4 +67,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default Admin;
