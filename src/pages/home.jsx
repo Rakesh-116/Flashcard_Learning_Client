@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Flashcard from "../components/Flashcard";
+import Flashcard from "../components/Flashcard.jsx";
 
 const Home = () => {
   const [flashcards, setFlashcards] = useState([]);

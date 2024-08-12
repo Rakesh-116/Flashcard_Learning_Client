@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import AdminDashboard from "./admin/adminDashboard";
-import Insert from "./admin/insertFlashCard";
-import Update from "./admin/updateFlashCard";
+import Home from "./pages/Home.jsx";
+import AdminDashboard from "./admin/adminDashboard.jsx";
+import Insert from "./admin/insertFlashCard.jsx";
+import Update from "./admin/updateFlashCard.jsx";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Navbar from '../components/admin/Navbar';
+import Navbar from '../components/admin/Navbar.jsx';
 import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
