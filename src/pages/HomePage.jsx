@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Flashcard from "../components/Flashcard.jsx";
+import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const HomePage = () => {
   const [flashcards, setFlashcards] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [showAnswer, setShowAnswer] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchFlashcards = async () => {
@@ -37,6 +39,10 @@ const Home = () => {
     );
   };
 
+  const handleAdmin = () => {
+    navigate('/admin');
+  }
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
@@ -62,9 +68,15 @@ const Home = () => {
           </button>
           <button
             onClick={handleNext}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 mx-2 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             Next
+          </button>
+          <button
+            onClick={handleAdmin}
+            className="px-4 mx-2 py-2 bg-red-500 text-white rounded hover:bg-blue-600"
+          >
+            Admin
           </button>
         </div>
       </div>
@@ -72,4 +84,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

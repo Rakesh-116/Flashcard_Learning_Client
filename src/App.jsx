@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home.jsx";
-import AdminDashboard from "./admin/adminDashboard.jsx";
-import Insert from "./admin/insertFlashCard.jsx";
-import Update from "./admin/updateFlashCard.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import AdminDashboard from "./admin/AdminDashboard.jsx";
+import Insert from "./admin/InsertFlashCard.jsx";
+import Update from "./admin/UpdateFlashCard.jsx";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* User Routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminDashboard />}/>
