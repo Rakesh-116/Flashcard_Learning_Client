@@ -61,7 +61,7 @@ const Admin = () => {
               </div>
             </div>
           ))}
-          <div>Hello</div>
+          <div className='text-green-800'>Hello</div>
         </div>
       </div>
     </>
